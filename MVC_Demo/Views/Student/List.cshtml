@@ -1,0 +1,32 @@
+﻿@using MVC_Demo.Views;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Sname</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Student s in (IEnumerable<Student>)ViewData["list"])
+        {
+            <tr>
+                <td>@s.Id</td>
+                <td>@s.Sname</td>
+                <td>@s.Marks</td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
